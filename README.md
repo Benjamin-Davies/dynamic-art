@@ -6,3 +6,4 @@ A repository where I can post dynamic interactive art.
 
 * [Starfield](./starfield/)
 * [Metaballs](./metaballs/)
+* [Mandelbrot](./mandelbrot/)

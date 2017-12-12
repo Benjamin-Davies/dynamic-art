@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mandelbrot Explorer</title>
+  <style>
+    body {
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="mainCanvas"></canvas>
+  <h1>Loading...</h1>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix.js"></script>
+  <script type="module">
+    import Explorer from './app.js';
+    const explorer = new Explorer(document.getElementById('mainCanvas'));
+    explorer.run();
+  </script>
+</body>
+
+</html>
