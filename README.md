@@ -1,4 +1,4 @@
-# dynamic-art
+# Dynamic Art
 
 A repository where I can post dynamic interactive art.
 
