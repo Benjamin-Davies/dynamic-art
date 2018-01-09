@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hex Ant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <style>
+    canvas {
+      border: 3px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="center">
+    <h1>Hex Ant</h1>
+    <h3>Langton's Ant implemented on a hexagonal grid</h3>
+  </header>
+
+  <main class="container">
+    <div id="canvasContainer" class="center"></div>
+    <div class="row">
+      <div class="col offset-s4 s4 blue white-text">
+        <ul>
+          <li>
+            Fps:
+            <code id="fps">--</code>
+          </li>
+          <li>
+            Iterations:
+            <code id="iter"></code>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="center">
+      <p>
+        More information on Langton's Ant can be found
+        <a href="https://en.wikipedia.org/wiki/Langton%27s_ant">here</a>.
+      </p>
+      <p>
+        Credit to
+        <a href="https://www.redblobgames.com/grids/hexagons/">Red Blob Games</a>
+        for most of the hexagonal grid techniques.
+      </p>
+    </div>
+  </main>
+
+  <footer class="page-footer green">
+    <div class="container">
+      <h5 class="white-text">Links</h5>
+      <ul>
+        <li>
+          <a class="grey-text text-lighten-3" href="https://benjamin-davies.github.io/dynamic-art/">Dynamic Art</a>
+        </li>
+        <li>
+          <a class="grey-text text-lighten-3" href="https://github.com/benjamin-davies/dynamic-art/">Repository</a>
+        </li>
+        <li>
+          <a class="grey-text text-lighten-3" href="https://benjamin-davies.github.io/">My Website</a>
+        </li>
+        <li>
+          <a class="grey-text text-lighten-3" href="https://github.com/benjamin-davies/">My Github Profile</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2018 Benjamin Davies - Free for use under
+        <a href="../LICENSE" class="grey-text text-lighten-3">GNU GENERAL PUBLIC LICENSE</a>
+        <a class="grey-text text-lighten-4 right" href="https://benjamin-davies.github.io/projects.html">More Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix-min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
