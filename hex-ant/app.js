@@ -26,6 +26,7 @@
   const cells = new Array(gridWidth * gridHeight).fill(false);
   const ant = { pos: vec2.fromValues(12, 20), dir: 0 };
 
+  window.paused = false;
   let frames = 0;
   let total = 0;
   setInterval(() => {
@@ -36,6 +37,7 @@
   const draw = () => {
     requestAnimationFrame(draw);
     frames++;
+    if (window.paused) return;
     total++;
     iter.innerText = total;
 
