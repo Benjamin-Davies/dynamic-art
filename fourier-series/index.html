@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fourier Series</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Fourier Series</h1>
+      <h3>Adding sine waves to make shapes</h3>
+    </header>
+
+    <section id="intro">
+      <h3>Intro</h3>
+      <p>This page was inspired by the following videos:</p>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=spUNpyF58BY">
+            But what is the Fourier Transform? A visual introduction. -
+            3Blue1Brown
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=ds0cmAV-Yek">
+            What is a Fourier Series? (Explained by drawing circles) - Smarter
+            Every Day
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=qS4H6PEcCCA">
+            Epicycles, complex Fourier series and Homer Simpson's orbit -
+            Mathologer
+          </a>
+        </li>
+      </ul>
+      <p>
+        Throughout the page I reference complex numbers. I recommend that you
+        roughly understand euler's formula and multiplying complex numbers.
+      </p>
+      <noscript>
+        <div class="warn">This page uses javascipt. Please enable it.</div>
+      </noscript>
+      <script nomodule src="nomodule.js"></script>
+    </section>
+
+    <section id="basics">
+      <h3>Basics</h3>
+      <p>Sine waves are formed when you trace the outline of a circle.</p>
+      <canvas id="01-sine"></canvas>
+      <script type="module">
+        import { sine } from './app.js';
+        sine(document.getElementById('01-sine'));
+      </script>
+    </section>
+
+    <footer><p>Page and associated code by Benjamin Davies</p></footer>
+  </body>
+</html>
