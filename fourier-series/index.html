@@ -52,9 +52,25 @@
       <p>Sine waves are formed when you trace the outline of a circle.</p>
       <canvas id="01-sine"></canvas>
       <script type="module">
-        import { sine } from './app.js';
-        sine(document.getElementById('01-sine'));
+        import { wave } from './app.js';
+        wave(document.getElementById('01-sine'), [1]);
       </script>
+      <p>We can add sine waves to make other functions, such as sawtooth
+        waves&hellip;<p>
+      <canvas id="02-saw"></canvas>
+      <script type="module">
+        import { wave } from './app.js';
+        import { range } from './util.js';
+        wave(document.getElementById('02-saw'), range(2, 20, 2));
+      </script>
+      <p>&hellip;or square waves.</p>
+      <canvas id="03-sqr"></canvas>
+      <script type="module">
+        import { wave } from './app.js';
+        import { range } from './util.js';
+        wave(document.getElementById('03-sqr'), range(1, 20, 2));
+      </script>
+      <p>In fact, you can <i>approximate</i> any function with sine waves. This is called a Fourier Series.</p>
     </section>
 
     <footer><p>Page and associated code by Benjamin Davies</p></footer>

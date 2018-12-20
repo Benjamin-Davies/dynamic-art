@@ -7,6 +7,8 @@ import { sizes, colours } from './config.js';
  */
 export function plot(ctx, f, points = 200) {
   ctx.lineWidth = sizes.lineWidth;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
   ctx.strokeStyle = colours.path;
   ctx.beginPath();
   const start = f(0);
@@ -29,6 +31,7 @@ export function plot(ctx, f, points = 200) {
 export function drawEpicycle(ctx, frequency, amplitude) {
   ctx.lineWidth = sizes.lineWidth;
   ctx.strokeStyle = colours.circle;
+  ctx.fillStyle = colours.circleFill;
   ctx.beginPath();
   ctx.ellipse(
     0,
@@ -40,10 +43,11 @@ export function drawEpicycle(ctx, frequency, amplitude) {
     2 * Math.PI
   );
   ctx.stroke();
+  ctx.fill();
 
-  const theta = 2 * Math.PI * getTime();
-  const x = sizes.unit * Math.cos(theta);
-  const y = -sizes.unit * Math.sin(theta);
+  const theta = frequency * 2 * Math.PI * getTime();
+  const x = sizes.unit * amplitude * Math.cos(theta);
+  const y = -sizes.unit * amplitude * Math.sin(theta);
   ctx.strokeStyle = colours.line;
   ctx.lineCap = 'round';
   ctx.beginPath();
